@@ -1,5 +1,5 @@
 #include "WPILib.h"
-#include "Drive.h"
+#include "Manipulator.h"
 #include "OperatorInterface.h"
 #include "Macros.h"
 
@@ -7,12 +7,12 @@ class Main : public IterativeRobot
 {
 public:
 	
-	Drive *drive;
+	Manipulator *manip;
 	OperatorInterface *oi;
 
 	Main()
 	{
-		drive = new Drive();
+		manip = new Manipulator();
 		oi = new OperatorInterface();
 		
 		oi->dashboard->init();

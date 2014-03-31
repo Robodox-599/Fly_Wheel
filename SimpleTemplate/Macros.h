@@ -4,18 +4,11 @@
 #define PNEUMATICS_24V_SLOT						(1)
 
 	//Digital Sidecar
-#define DRIVE_FRONT_LEFT_MOTOR_CHANNEL          (1)
-#define DRIVE_REAR_LEFT_MOTOR_CHANNEL           (2)
-#define DRIVE_FRONT_RIGHT_MOTOR_CHANNEL         (3)
-#define DRIVE_REAR_RIGHT_MOTOR_CHANNEL          (4)
+#define FLYWHEEL_MOTOR_CHANNEL          		(1)
 
 	//PWM
-#define SHIFTER_SOLENOID_CHANNEL_A				(1)
-#define SHIFTER_SOLENOID_CHANNEL_B				(2)
-#define LEFT_DRIVE_ENCODER_CHANNEL_A			(3)
-#define LEFT_DRIVE_ENCODER_CHANNEL_B			(4)
-#define RIGHT_DRIVE_ENCODER_CHANNEL_A			(5)
-#define RIGHT_DRIVE_ENCODER_CHANNEL_B			(6)
+#define FLYWHEEL_ENCODER_CHANNEL_A				(3)
+#define FLYWHEEL_ENCODER_CHANNEL_B				(4)
 
 #define DEADZONE								(10)
 #define REDUCTION								(.5)
