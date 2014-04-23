@@ -10,10 +10,11 @@ public:
 	Manipulator();
 	~Manipulator();
 	
-	void SetVelocity(double speed);
-	double GetVelocity();
+	void setVelocity(double speed);
+	double getVelocity();
 	
-	double GetRPM();
+	void setRPM(double targetRPM);
+	double getRPM();
 	
 private:
 	Talon *flywheel;
@@ -26,6 +27,7 @@ private:
 	double deltaTicks;
 	double ticksPerMinute;
 	double rpm;
+	double velocity;
 };
 
 #endif

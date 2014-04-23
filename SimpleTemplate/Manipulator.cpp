@@ -13,6 +13,7 @@ Manipulator::Manipulator()
 	initTicks = 0;
 	deltaTicks = 0;
 	ticksPerMinute = 0;
+	velocity = 0;
 }
 
 Manipulator::~Manipulator()
@@ -26,17 +27,30 @@ Manipulator::~Manipulator()
 	timer = NULL;
 }
 
-void Manipulator::SetVelocity(double speed)
+void Manipulator::setVelocity(double speed)
 {
 	flywheel->Set(speed, SYNC_STATE_OFF);
 }
 
-double Manipulator::GetVelocity()
+double Manipulator::getVelocity()
 {
 	return flywheel->Get();
 }
 
-double Manipulator::GetRPM()
+void Manipulator::setRPM(double targetRPM)
+{
+	if(rpm < targetRPM)
+	{
+		velocity++;
+	}
+	else if(rpm > targetRPM)
+	{
+		velocity--;
+	}
+	flywheel->Set(velocity, SYNC_STATE_OFF);
+}
+
+double Manipulator::getRPM()
 {	
 	if(init)
 	{
@@ -59,5 +73,4 @@ double Manipulator::GetRPM()
 	}
 	return rpm;
 }
-
 
